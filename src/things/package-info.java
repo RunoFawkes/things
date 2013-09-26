@@ -2,7 +2,7 @@
  * 
  */
 /**
- * 
+ * As coisas, literalmente.
  * 
  * @author Gabriel
  *

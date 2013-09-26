@@ -1,13 +1,13 @@
-[THING]
-@testting{
-	is{
-		[ID|testting]
-		[Seed|#seed]
-		[Nome|TestTing]
-		[Peso|50 Kg]
-		[Descricao|Uma coisa feita de coisas para testar coisas dentro de coisas]
-	}
-	has{
-		[testting|100|1..100]
-	}
+[THING@testting]
+is{
+[NOME DO ATRIBUTO::VALOR::CHANCE DE SER]
+[Nome::TestTing]
+[Cor::Azul]
+[Peso::50 Kg]
+[Descricao::Uma coisa feita de coisas para testar coisas dentro de coisas]
+}
+has{
+[testting]
+[testting::50]
+[testting::100::1-20]
 }

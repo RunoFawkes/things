@@ -2,6 +2,8 @@
  * 
  */
 /**
+ * Interface, em construcao
+ * 
  * @author Gabriel
  *
  */
