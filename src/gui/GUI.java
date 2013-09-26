@@ -14,7 +14,11 @@ import com.googlecode.lanterna.gui.component.Table;
 import com.googlecode.lanterna.gui.layout.*;
 import com.googlecode.lanterna.terminal.TerminalSize;
 import com.googlecode.lanterna.gui.Component;
-
+/**
+ * Interface, em construcao
+ * @author Gabriel
+ *
+ */
 public class GUI {
 
 	 GUIScreen guiScreen = TerminalFacade.createGUIScreen();

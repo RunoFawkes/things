@@ -4,43 +4,78 @@ import java.util.ArrayList;
 
 import creators.ThingCreator;
 
+/**
+ * Classe responsavel pelas coisas. literalmente.
+ * 
+ * @author Gabriel
+ *
+ */
 public class Thing {
-
+	
+	//seed da coisa
+	double seed = 0;
+	//seed da coisa
+	String id = "";
+	//o que ela e (seus atributos)
 	ArrayList<Atribute> is = new ArrayList<Atribute>();
+	//o que ela tem
 	ArrayList<Thing> has = new ArrayList<Thing>();
+	//criador de coisas
+	ThingCreator creator;
 
-	ThingCreator creator = new ThingCreator();
+	//=========================
+	//CONSTRUTORES
+	//=========================
 
-	public Thing() {
-		this.is = null;
-		this.has = null;
-	}
 
-	public Thing(ArrayList<Atribute> pIs) {
-		this.is = pIs;
-	}
-
-	public Thing(String id, int seed) {
-		is.add(0, new Atribute("ID",id));
-		is.add(1, new Atribute("Seed",seed));
+	/**
+	 * Construtor com id e seed definido
+	 * 
+	 * @param id
+	 * @param pSeed
+	 */
+	public Thing(String pId, double pSeed) {
+		this.id = pId;
+		this.seed = pSeed;
+		this.creator = new ThingCreator(this.id,this.seed);
 	}
 	
 	//=========================
+	//metodos
+	//=========================
 
+	/**
+	 * Defide o objeto, detalhandoo mais
+	 * 
+	 */
 	public void define() {
-		this.is = this.creator.defineIs(this.is);
-		this.has = this.creator.defineHas(this.is);
+		this.is = this.creator.defineIs();
+		this.has = this.creator.defineHas();
 	}
 	
 	
 	//==========================
+	//getters
+	//==========================
 	
+	/**
+	 * Retorna o que o objeto e (seus atributos)
+	 * @return
+	 */
 	public ArrayList<Atribute> getIs(){
 		return this.is;
 	}
 	
 	public ArrayList<Thing> getHas(){
 		return this.has;
+	}
+	
+	public String getId(){
+		return this.id;
+	}
+	
+	public double getSeed(){
+		return this.seed;
 	}
 
 }

@@ -1,0 +1,32 @@
+## COMENTARIOS CANCELAM A LINHA INTEIRA
+## <-- isso e um comentario
+
+## linhas em branco sao ignoradas
+
+## [THING] tag que confirma o tipo do arquivo.
+
+[THING]
+
+## @thing, id da coisa, igual ao nome do .thing
+@thing{
+
+## o a coisa e (seus atributos) 
+	is{
+		## [NOME DO ATRIBUTO|VALOR]
+		## Seguir sempre essa ordem:
+		
+		[ID|thing]
+		[Nome|TestTing]
+		
+		## daqui para frente nao e tao definido
+		
+		[Peso|50 Kg]
+		[Descricao|Uma coisa feita de coisas para testar coisas dentro de coisas]
+	}
+	
+	## o que a coisa pode ter
+	has{
+		## [id da coisa|se tiver, quantas tera|chance de ter a coisa]
+		[testting|1..100|100]
+	}
+}
